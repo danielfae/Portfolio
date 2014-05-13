@@ -86,3 +86,22 @@ function unslide(event) {
 		projects[i].classList.remove("slideLeft");
 	}
 }
+
+function panelSel(element){
+
+	this.setAttribute('style','background-color: yellow;');
+
+
+}
+
+function panelHighlight() {
+	var animationFrame = webkitRequestAnimationFrame(moveSquare);
+
+	panelSel(one, hl);
+
+	if (xPos > xMax || yPos > yMax) {
+		console.log("Closing the animation frame; xPos = " + xMax + " and yPos = " + yPos);
+		webkitCancelAnimationFrame(animationFrame);
+		console.log("Done moving the square; either xPos > xMax or yPos > yMax");
+	}
+}
