@@ -9,7 +9,7 @@ function getStyleProp(elem, prop){
 var mouseX = null;
 var mouseY = null;
 var scrollTimeline = null;
-var updateInterval = 10;
+var updateInterval = 300;
 var scrolling = false;
 
 window.onmousemove = function(event) {
@@ -33,7 +33,7 @@ timeline.onmouseout = unslide; // Undo slides when out of timeline
 
 
 function scroll(event) {
-	var buffer = window.innerWidth/4;
+	var buffer = window.innerWidth/6;
 
 	var distanceToCenter = Math.abs(window.innerWidth/2-mouseX);
 	var speed = distanceToCenter/(window.innerWidth/2);
